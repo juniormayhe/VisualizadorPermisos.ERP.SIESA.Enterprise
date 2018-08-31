@@ -1,0 +1,24 @@
+﻿USE [VisualizadorPermisosUNOEE]
+GO
+
+/****** Object:  Table [dbo].[DescripcionArea]    Script Date: 12/19/2017 2:14:10 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[DescripcionArea](
+	[IdArea] [int] NOT NULL,
+	[DescripcionArea] [varchar](500) NULL,
+	[Usuario] [varchar](200) NOT NULL,
+	[Fecha] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IdArea] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[DescripcionArea] ADD  DEFAULT (getdate()) FOR [Fecha]
+GO

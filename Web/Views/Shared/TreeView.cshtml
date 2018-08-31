@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Model.Permiso>
+@using System.Web.UI.WebControls
+<div id="permisos" class="form-body scroll-permisos">
+    
+    @foreach (var item in Model)
+    {
+        <div>@item.Ruta</div>
+    }
+</div>
+    

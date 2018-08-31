@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<Model.Empresa>
+
+@{
+    Layout = null;
+}
+
+<select class="form-control custom-select" id="empresa">
+    <option selected>Seleccione una empresa</option>
+    @foreach (var empresa in Model)
+    {
+        <option value="@empresa.IdEmpresa">@empresa.NombreEmpresa</option>
+    }
+    
+</select>

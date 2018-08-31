@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VisualizadorPermisosUNOEEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DescripcionArea">
+          <Key>
+            <PropertyRef Name="IdArea" />
+          </Key>
+          <Property Name="IdArea" Type="int" Nullable="false" />
+          <Property Name="DescripcionArea" Type="varchar" MaxLength="500" />
+          <Property Name="Usuario" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="VisualizadorPermisosUNOEEModelStoreContainer">
+          <EntitySet Name="DescripcionArea" EntityType="Self.DescripcionArea" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VisualizadorPermisosUNOEEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DescripcionArea">
+          <Key>
+            <PropertyRef Name="IdArea" />
+          </Key>
+          <Property Name="IdArea" Type="Int32" Nullable="false" />
+          <Property Name="DescripcionArea1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="VisualizadorPermisosUNOEEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DescripcionAreas" EntityType="Self.DescripcionArea" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VisualizadorPermisosUNOEEModelStoreContainer" CdmEntityContainer="VisualizadorPermisosUNOEEEntities">
+          <EntitySetMapping Name="DescripcionAreas">
+            <EntityTypeMapping TypeName="VisualizadorPermisosUNOEEModel.DescripcionArea">
+              <MappingFragment StoreEntitySet="DescripcionArea">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="DescripcionArea1" ColumnName="DescripcionArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

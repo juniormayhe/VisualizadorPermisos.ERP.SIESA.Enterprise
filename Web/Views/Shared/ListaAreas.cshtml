@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<Model.Area>
+
+@{
+    Layout = null;
+}
+<select class="form-control w-100" id="area" size="10">
+    
+    @foreach (var area in Model)
+    {
+        <option value="@area.IdArea">@area.NombreArea</option>
+    }
+    
+</select>

@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="centraliza">
+
+    <div class="row mt-4">
+
+        <div class="col-md-12 bg-light p-4">
+
+            <div class="centraliza">
+                <div class="row">
+                    <h1>No fue posible procesar su solicitud</h1>
+
+                </div>
+                <div class="row">
+                    <p>
+                        No se preocupe, nuestros ingenieros ya fueron notificados sobre esta situación.
+                        Caso sea necesario, por favor intente nuevamente o comuníquese con el área de Informática a través del
+                        <a href="mailto:desarrollo@tax-individual.com.co">desarrollo@tax-individual.com.co</a>.
+                    </p>
+                </div>
+                <div class="row">
+                    <strong>Error:</strong>&nbsp;<span class="text-danger">@(ViewBag.Error)</span>
+                </div>
+                <div class="row">
+                    <strong>Mensaje:</strong>&nbsp<span class="text-danger">@(ViewBag.Message)</span>
+                </div>
+                <div class="row">
+                    <div id="exampleAccordion" data-children=".item">
+                        <div class="item">
+                            <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">
+                                <strong>Ver detalles</strong>
+                            </a>
+                            <div id="exampleAccordion2" class="collapse" role="tabpanel">
+                                <p class="mb-3 text-danger">
+                                    @(Html.Raw(ViewBag.Detalles)).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <p>
+                        <a href="./"><i class="fa fa-reply"></i> Volver</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

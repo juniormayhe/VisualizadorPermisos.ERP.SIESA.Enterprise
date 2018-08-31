@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="centraliza">
+
+    <div class="row mt-4">
+
+        <div class="col-md-12 bg-light p-4">
+
+            <div class="centraliza">
+                <div class="row">
+                    <h1>Página no encontrada</h1>
+
+                </div>
+                <div class="row">
+                    <p>
+                        Lo sentimos pero la dirección <code>@(Request.Url.OriginalString)</code> no fue encontrada. Por favor <a href="./">retorne a la página inicial</a>. 
+                    </p>
+                </div>
+                <div class="row">
+                    <p>
+                        En caso de dudas por favor comuníquese con el área de Informática a través del
+                        <a href="mailto:desarrollo@tax-individual.com.co">desarrollo@tax-individual.com.co</a>.
+                    </p>
+                </div>
+
+                <div class="row mt-4">
+                    <p>
+                        <a href="./"><i class="fa fa-reply"></i> Volver</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
